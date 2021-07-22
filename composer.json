@@ -1,0 +1,35 @@
+{
+    "name": "titeca/laravel-sqla",
+    "description": "Laravel database connector to connect to SQLAnywhere database instance via ODBC",
+    "type": "library",
+    "license": "MIT",
+    "version": "0.1",
+    "authors": [
+        {
+            "name": "Stijn Goethals",
+            "email": "stijn.goethals@titeca.be"
+        }
+    ],
+    "keywords": [
+        "laravel", "database", "odbc", "driver", "sqlanywhere"
+    ],
+    "require": {
+        "php": ">=8.0",
+        "ext-pdo": "*",
+        "ext-pdo_odbc": "*",
+        "illuminate/support": "^8.0",
+        "illuminate/database": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Titeca\\SqlAnywhere\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Titeca\\SqlAnywhere\\ServiceProvider"
+            ]
+        }
+    }
+}
