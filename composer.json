@@ -3,7 +3,7 @@
     "description": "Laravel database connector to connect to SQLAnywhere database instance via ODBC",
     "type": "library",
     "license": "MIT",
-    "version": "0.1",
+    "version": "1.0",
     "authors": [
         {
             "name": "Stijn Goethals",
