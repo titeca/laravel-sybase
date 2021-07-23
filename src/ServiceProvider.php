@@ -1,6 +1,6 @@
 <?php
 
-namespace Titeca\SqlAnywhere;
+namespace Titeca\Sybase;
 
 use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 
@@ -13,7 +13,7 @@ class ServiceProvider extends IlluminateServiceProvider
      */
     public function boot()
     {
-        $this->app['db']->extend('sqlanywhere', function($config, $connection) {
+        $this->app['db']->extend('sybase', function($config, $connection) {
             return new Connection(
                 (new Connector)->connect($config),
                 $config['database'], 

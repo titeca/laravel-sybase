@@ -1,6 +1,6 @@
 {
-    "name": "titeca/laravel-sqla",
-    "description": "Laravel database connector to connect to SQLAnywhere database instance via ODBC",
+    "name": "titeca/laravel-sybase",
+    "description": "Laravel database driver to connect to a sybase database instance via ODBC",
     "type": "library",
     "license": "MIT",
     "version": "1.0",
@@ -11,7 +11,7 @@
         }
     ],
     "keywords": [
-        "laravel", "database", "odbc", "driver", "sqlanywhere"
+        "laravel", "database", "odbc", "driver", "sqlanywhere", "sybase"
     ],
     "require": {
         "php": ">=8.0",
@@ -22,13 +22,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Titeca\\SqlAnywhere\\": "src/"
+            "Titeca\\Sybase\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Titeca\\SqlAnywhere\\ServiceProvider"
+                "Titeca\\Sybase\\ServiceProvider"
             ]
         }
     }

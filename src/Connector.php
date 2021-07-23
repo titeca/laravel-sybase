@@ -1,10 +1,9 @@
 <?php
 
-namespace Titeca\SqlAnywhere;
+namespace Titeca\Sybase;
 
 use Illuminate\Database\Connectors\Connector as IlluminateConnector;
 use Illuminate\Database\Connectors\ConnectorInterface;
-use Illuminate\Support\Arr;
 use PDO;
 
 class Connector extends IlluminateConnector implements ConnectorInterface
@@ -31,9 +30,7 @@ class Connector extends IlluminateConnector implements ConnectorInterface
      */
     public function connect(array $config)
     {
-        $options = $this->getOptions($config);
-
-        return $this->createConnection($this->getDsn($config), $config, $options);
+        return $this->createConnection($this->getDsn($config), $config, $this->getOptions($config));
     }
 
     /**
@@ -52,6 +49,10 @@ class Connector extends IlluminateConnector implements ConnectorInterface
 
         if (isset($config['database'])) {
             $arguments['Database'] = $config['database'];
+        }
+
+        if (isset($config['charset'])) {
+            $arguments['charset'] = "{$config['charset']}";
         }
 
         return $this->buildConnectString($arguments);

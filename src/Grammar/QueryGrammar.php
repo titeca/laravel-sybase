@@ -1,6 +1,6 @@
 <?php 
 
-namespace Titeca\SqlAnywhere\Grammar;
+namespace Titeca\Sybase\Grammar;
 
 use Illuminate\Database\Query\Grammars\Grammar;
 use Illuminate\Database\Query\Builder;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Titeca\SqlAnywhere\Grammar;
+namespace Titeca\Sybase\Grammar;
 
 use Illuminate\Support\Fluent;
 use Illuminate\Database\Schema\Blueprint;
